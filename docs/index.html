@@ -101,7 +101,7 @@
 				createSpheres();
 				await loadVideos();
 				setTimeout(playVideo, 1000);
-				setInterval(playVideo, videoDuration*1000 + 2000); // Auto loop after 7 seconds
+				setInterval(playVideo, videoDuration*1000 + 3000); // Auto loop after 8 seconds
 			}			
 			function createSpheres() {
 				for (let i = 0; i < numSpheres; i++) {
@@ -129,7 +129,7 @@
 
 					for (let i = 0; i < numSpheres; i++) {
 						const videoElement = document.createElement('video');
-						const videoURL = "spheres_video/" + i.toString().padStart(2, '0') + '.webm';
+						const videoURL = "spheres_video_lowres/" + i.toString().padStart(2, '0') + '.webm';
 						videoElement.src = videoURL;
 						videoElement.crossOrigin = 'anonymous';
 						videoElement.loop = false;
